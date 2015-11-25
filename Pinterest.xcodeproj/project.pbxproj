@@ -9,17 +9,19 @@
 /* Begin PBXBuildFile section */
 		522F3F411C04095E0037103C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F401C04095E0037103C /* main.m */; };
 		522F3F441C04095E0037103C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F431C04095E0037103C /* AppDelegate.m */; };
-		522F3F471C04095E0037103C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F461C04095E0037103C /* FirstViewController.m */; };
-		522F3F4A1C04095E0037103C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F491C04095E0037103C /* SecondViewController.m */; };
 		522F3F4D1C04095E0037103C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522F3F4B1C04095E0037103C /* Main.storyboard */; };
 		522F3F4F1C04095E0037103C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522F3F4E1C04095E0037103C /* Assets.xcassets */; };
 		522F3F521C04095E0037103C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522F3F501C04095E0037103C /* LaunchScreen.storyboard */; };
 		522F3F5C1C040AC60037103C /* JWPinItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F5B1C040AC60037103C /* JWPinItem.m */; };
 		522F3F5E1C0410FD0037103C /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 522F3F5D1C0410FD0037103C /* data.txt */; };
-		522F3F611C0435740037103C /* JWPinCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F601C0435740037103C /* JWPinCollectionCell.m */; };
-		522F3F641C0436900037103C /* JWPinCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F631C0436900037103C /* JWPinCollectionLayout.m */; };
-		52EF94081C045F7E0026642D /* JWPinViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF94071C045F7E0026642D /* JWPinViewUtil.m */; };
-		52EF940B1C04D18D0026642D /* JWTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF940A1C04D18D0026642D /* JWTabBarViewController.m */; };
+		52F6FB0F1C05C74B0075E446 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F6FB021C05C74B0075E446 /* FirstViewController.m */; };
+		52F6FB101C05C74B0075E446 /* JWTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F6FB041C05C74B0075E446 /* JWTabBarViewController.m */; };
+		52F6FB111C05C74B0075E446 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F6FB061C05C74B0075E446 /* SecondViewController.m */; };
+		52F6FB121C05C74B0075E446 /* JWPinCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F6FB0A1C05C74B0075E446 /* JWPinCollectionCell.m */; };
+		52F6FB131C05C74B0075E446 /* JWPinCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F6FB0C1C05C74B0075E446 /* JWPinCollectionLayout.m */; };
+		52F6FB141C05C74B0075E446 /* JWPinViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F6FB0E1C05C74B0075E446 /* JWPinViewUtil.m */; };
+		52F6FB191C05C7960075E446 /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F6FB161C05C7960075E446 /* YYFPSLabel.m */; };
+		52F6FB1A1C05C7960075E446 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52F6FB181C05C7960075E446 /* YYWeakProxy.m */; };
 		80855069579631F0AE2D48D4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE374025C21DB573F9BEE4FF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -29,10 +31,6 @@
 		522F3F401C04095E0037103C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		522F3F421C04095E0037103C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		522F3F431C04095E0037103C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		522F3F451C04095E0037103C /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		522F3F461C04095E0037103C /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		522F3F481C04095E0037103C /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		522F3F491C04095E0037103C /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		522F3F4C1C04095E0037103C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		522F3F4E1C04095E0037103C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		522F3F511C04095E0037103C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,15 +38,23 @@
 		522F3F5A1C040AC60037103C /* JWPinItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPinItem.h; sourceTree = "<group>"; };
 		522F3F5B1C040AC60037103C /* JWPinItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPinItem.m; sourceTree = "<group>"; };
 		522F3F5D1C0410FD0037103C /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
-		522F3F5F1C0435740037103C /* JWPinCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPinCollectionCell.h; sourceTree = "<group>"; };
-		522F3F601C0435740037103C /* JWPinCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPinCollectionCell.m; sourceTree = "<group>"; };
-		522F3F621C0436900037103C /* JWPinCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPinCollectionLayout.h; sourceTree = "<group>"; };
-		522F3F631C0436900037103C /* JWPinCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPinCollectionLayout.m; sourceTree = "<group>"; };
 		52EF94051C0457AC0026642D /* JWPin-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWPin-PrefixHeader.pch"; sourceTree = "<group>"; };
-		52EF94061C045F7E0026642D /* JWPinViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPinViewUtil.h; sourceTree = "<group>"; };
-		52EF94071C045F7E0026642D /* JWPinViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPinViewUtil.m; sourceTree = "<group>"; };
-		52EF94091C04D18D0026642D /* JWTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTabBarViewController.h; sourceTree = "<group>"; };
-		52EF940A1C04D18D0026642D /* JWTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTabBarViewController.m; sourceTree = "<group>"; };
+		52F6FB011C05C74B0075E446 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		52F6FB021C05C74B0075E446 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		52F6FB031C05C74B0075E446 /* JWTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTabBarViewController.h; sourceTree = "<group>"; };
+		52F6FB041C05C74B0075E446 /* JWTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTabBarViewController.m; sourceTree = "<group>"; };
+		52F6FB051C05C74B0075E446 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		52F6FB061C05C74B0075E446 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		52F6FB091C05C74B0075E446 /* JWPinCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPinCollectionCell.h; sourceTree = "<group>"; };
+		52F6FB0A1C05C74B0075E446 /* JWPinCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPinCollectionCell.m; sourceTree = "<group>"; };
+		52F6FB0B1C05C74B0075E446 /* JWPinCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPinCollectionLayout.h; sourceTree = "<group>"; };
+		52F6FB0C1C05C74B0075E446 /* JWPinCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPinCollectionLayout.m; sourceTree = "<group>"; };
+		52F6FB0D1C05C74B0075E446 /* JWPinViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPinViewUtil.h; sourceTree = "<group>"; };
+		52F6FB0E1C05C74B0075E446 /* JWPinViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPinViewUtil.m; sourceTree = "<group>"; };
+		52F6FB151C05C7960075E446 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
+		52F6FB161C05C7960075E446 /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
+		52F6FB171C05C7960075E446 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		52F6FB181C05C7960075E446 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
 		990E8697FF0B6CFE15D64E28 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EE374025C21DB573F9BEE4FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,27 +92,18 @@
 		522F3F3E1C04095E0037103C /* Pinterest */ = {
 			isa = PBXGroup;
 			children = (
+				52F6FB001C05C74B0075E446 /* Controller */,
+				52F6FB071C05C74B0075E446 /* FPS */,
+				52F6FB081C05C74B0075E446 /* View */,
 				522F3F591C040AAB0037103C /* Data */,
 				522F3F421C04095E0037103C /* AppDelegate.h */,
 				522F3F431C04095E0037103C /* AppDelegate.m */,
-				522F3F451C04095E0037103C /* FirstViewController.h */,
-				522F3F461C04095E0037103C /* FirstViewController.m */,
-				522F3F481C04095E0037103C /* SecondViewController.h */,
-				522F3F491C04095E0037103C /* SecondViewController.m */,
 				522F3F4B1C04095E0037103C /* Main.storyboard */,
 				522F3F4E1C04095E0037103C /* Assets.xcassets */,
 				522F3F501C04095E0037103C /* LaunchScreen.storyboard */,
 				522F3F531C04095E0037103C /* Info.plist */,
 				522F3F3F1C04095E0037103C /* Supporting Files */,
-				522F3F5F1C0435740037103C /* JWPinCollectionCell.h */,
-				522F3F601C0435740037103C /* JWPinCollectionCell.m */,
-				522F3F621C0436900037103C /* JWPinCollectionLayout.h */,
-				522F3F631C0436900037103C /* JWPinCollectionLayout.m */,
 				52EF94051C0457AC0026642D /* JWPin-PrefixHeader.pch */,
-				52EF94061C045F7E0026642D /* JWPinViewUtil.h */,
-				52EF94071C045F7E0026642D /* JWPinViewUtil.m */,
-				52EF94091C04D18D0026642D /* JWTabBarViewController.h */,
-				52EF940A1C04D18D0026642D /* JWTabBarViewController.m */,
 			);
 			path = Pinterest;
 			sourceTree = "<group>";
@@ -127,6 +124,43 @@
 				522F3F5B1C040AC60037103C /* JWPinItem.m */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		52F6FB001C05C74B0075E446 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52F6FB011C05C74B0075E446 /* FirstViewController.h */,
+				52F6FB021C05C74B0075E446 /* FirstViewController.m */,
+				52F6FB031C05C74B0075E446 /* JWTabBarViewController.h */,
+				52F6FB041C05C74B0075E446 /* JWTabBarViewController.m */,
+				52F6FB051C05C74B0075E446 /* SecondViewController.h */,
+				52F6FB061C05C74B0075E446 /* SecondViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52F6FB071C05C74B0075E446 /* FPS */ = {
+			isa = PBXGroup;
+			children = (
+				52F6FB151C05C7960075E446 /* YYFPSLabel.h */,
+				52F6FB161C05C7960075E446 /* YYFPSLabel.m */,
+				52F6FB171C05C7960075E446 /* YYWeakProxy.h */,
+				52F6FB181C05C7960075E446 /* YYWeakProxy.m */,
+			);
+			path = FPS;
+			sourceTree = "<group>";
+		};
+		52F6FB081C05C74B0075E446 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52F6FB091C05C74B0075E446 /* JWPinCollectionCell.h */,
+				52F6FB0A1C05C74B0075E446 /* JWPinCollectionCell.m */,
+				52F6FB0B1C05C74B0075E446 /* JWPinCollectionLayout.h */,
+				52F6FB0C1C05C74B0075E446 /* JWPinCollectionLayout.m */,
+				52F6FB0D1C05C74B0075E446 /* JWPinViewUtil.h */,
+				52F6FB0E1C05C74B0075E446 /* JWPinViewUtil.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A586D48E43D48AED2540D5D9 /* Pods */ = {
@@ -268,15 +302,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52F6FB111C05C74B0075E446 /* SecondViewController.m in Sources */,
 				522F3F5C1C040AC60037103C /* JWPinItem.m in Sources */,
-				522F3F641C0436900037103C /* JWPinCollectionLayout.m in Sources */,
-				522F3F4A1C04095E0037103C /* SecondViewController.m in Sources */,
-				52EF940B1C04D18D0026642D /* JWTabBarViewController.m in Sources */,
-				52EF94081C045F7E0026642D /* JWPinViewUtil.m in Sources */,
-				522F3F611C0435740037103C /* JWPinCollectionCell.m in Sources */,
+				52F6FB1A1C05C7960075E446 /* YYWeakProxy.m in Sources */,
 				522F3F441C04095E0037103C /* AppDelegate.m in Sources */,
-				522F3F471C04095E0037103C /* FirstViewController.m in Sources */,
+				52F6FB121C05C74B0075E446 /* JWPinCollectionCell.m in Sources */,
+				52F6FB131C05C74B0075E446 /* JWPinCollectionLayout.m in Sources */,
 				522F3F411C04095E0037103C /* main.m in Sources */,
+				52F6FB191C05C7960075E446 /* YYFPSLabel.m in Sources */,
+				52F6FB0F1C05C74B0075E446 /* FirstViewController.m in Sources */,
+				52F6FB101C05C74B0075E446 /* JWTabBarViewController.m in Sources */,
+				52F6FB141C05C74B0075E446 /* JWPinViewUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

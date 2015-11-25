@@ -11,6 +11,7 @@
 #import "JWPinCollectionCell.h"
 #import "JWPinCollectionLayout.h"
 #import "JWPinViewUtil.h"
+#import "YYFPSLabel.h"
 
 
 @interface FirstViewController () <UICollectionViewDataSource, JWPinCollectionViewDelegateWaterfallLayout>
@@ -45,6 +46,8 @@ static NSString *const kJWReuseIdentifier = @"Pin";
     _refreshControl = [[UIRefreshControl alloc] init];
     [_collectionView addSubview:_refreshControl];
     [_refreshControl addTarget:self action:@selector(reload) forControlEvents:UIControlEventValueChanged];
+    
+    [self.view addSubview:[[YYFPSLabel alloc] initWithFrame:CGRectMake(16, self.view.height - 50 - self.tabBarController.tabBar.height, 0, 0)]];
 }
 
 - (void)viewDidLayoutSubviews
