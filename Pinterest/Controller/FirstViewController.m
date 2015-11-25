@@ -55,7 +55,7 @@ static NSString *const kJWReuseIdentifier = @"Pin";
     [_collectionView addSubview:_refreshControl];
     [_refreshControl addTarget:self action:@selector(reload) forControlEvents:UIControlEventValueChanged];
     
-    [self.view addSubview:[[YYFPSLabel alloc] initWithFrame:CGRectMake(16, self.view.height - 50 - self.tabBarController.tabBar.height, 0, 0)]];
+    [self.view addSubview:[[YYFPSLabel alloc] initWithFrame:CGRectMake(16, self.view.height - 30 - self.tabBarController.tabBar.height, 0, 0)]];
 }
 
 - (void)didReceiveMemoryWarning

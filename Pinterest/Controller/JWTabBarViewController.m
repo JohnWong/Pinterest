@@ -21,6 +21,10 @@
     [super viewDidLoad];
     self.view.layer.cornerRadius = 6;
     self.view.clipsToBounds = YES;
+    
+    for (UITabBarItem *item in self.tabBar.items) {
+        item.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    }
 }
 
 - (void)didReceiveMemoryWarning
