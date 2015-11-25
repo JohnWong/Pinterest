@@ -12,11 +12,13 @@
 #import "JWPinCollectionLayout.h"
 #import "JWPinViewUtil.h"
 
+
 @interface FirstViewController () <UICollectionViewDataSource, JWPinCollectionViewDelegateWaterfallLayout>
 
 @end
 
-static NSString * const kJWReuseIdentifier = @"Pin";
+static NSString *const kJWReuseIdentifier = @"Pin";
+
 
 @implementation FirstViewController {
     UICollectionView *_collectionView;
@@ -24,10 +26,11 @@ static NSString * const kJWReuseIdentifier = @"Pin";
     NSArray<JWPinItem *> *_data;
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
-    
+
+
     _data = [JWPinItem loadSampleData];
     _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:[[JWPinCollectionLayout alloc] init]];
     _collectionView.contentInset = UIEdgeInsetsMake(0, 0, self.tabBarController.tabBar.frame.size.height, 0);
@@ -38,7 +41,7 @@ static NSString * const kJWReuseIdentifier = @"Pin";
     [_collectionView registerClass:[JWPinCollectionCell class] forCellWithReuseIdentifier:kJWReuseIdentifier];
     [self.view addSubview:_collectionView];
     [_collectionView reloadData];
-    
+
     _refreshControl = [[UIRefreshControl alloc] init];
     [_collectionView addSubview:_refreshControl];
     [_refreshControl addTarget:self action:@selector(reload) forControlEvents:UIControlEventValueChanged];
@@ -54,7 +57,8 @@ static NSString * const kJWReuseIdentifier = @"Pin";
     }
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -78,7 +82,7 @@ static NSString * const kJWReuseIdentifier = @"Pin";
     JWPinItem *item = _data[indexPath.row];
     JWPinCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kJWReuseIdentifier forIndexPath:indexPath];
     [cell setItem:item];
-    return cell;    
+    return cell;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

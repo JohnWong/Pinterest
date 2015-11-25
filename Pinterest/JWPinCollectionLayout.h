@@ -44,6 +44,7 @@
 
 @end
 
+
 @interface JWPinCollectionLayout : UICollectionViewLayout
 
 @property (nonatomic, assign) CGFloat itemWidth;

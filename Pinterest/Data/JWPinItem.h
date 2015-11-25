@@ -6,6 +6,7 @@
 //  Copyright © 2015 John Wong. All rights reserved.
 //
 
+
 @interface JWPinner : NSObject
 
 @property (nonatomic, strong) NSString *fullName;
@@ -15,6 +16,7 @@
 
 @end
 
+
 @interface JWPinImage : NSObject
 
 @property (nonatomic, strong) NSString *url;
@@ -22,6 +24,7 @@
 @property (nonatomic, assign) NSInteger height;
 
 @end
+
 
 @interface JWPinItem : NSObject
 

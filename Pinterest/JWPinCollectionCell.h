@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JWPinItem.h"
 
+
 @interface JWPinCollectionCell : UICollectionViewCell
 
 - (void)setItem:(JWPinItem *)item;

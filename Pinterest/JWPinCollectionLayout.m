@@ -8,18 +8,21 @@
 
 #import "JWPinCollectionLayout.h"
 
+
 @interface JWPinCollectionLayout ()
 
-@property (nonatomic, weak) id <JWPinCollectionViewDelegateWaterfallLayout> delegate;
+@property (nonatomic, weak) id<JWPinCollectionViewDelegateWaterfallLayout> delegate;
 @property (nonatomic, strong) NSMutableArray *columnHeights;
 @property (nonatomic, strong) NSMutableArray *allItemAttributes;
 @property (nonatomic, strong) NSMutableArray *sectionItemAttributes;
 
 @end
 
+
 @implementation JWPinCollectionLayout
 
-static CGFloat JWPinFloorCGFloat(CGFloat value) {
+static CGFloat JWPinFloorCGFloat(CGFloat value)
+{
     CGFloat scale = [UIScreen mainScreen].scale;
     return floor(value * scale) / scale;
 }
@@ -40,13 +43,13 @@ static CGFloat JWPinFloorCGFloat(CGFloat value) {
     [self.allItemAttributes removeAllObjects];
     [self.sectionItemAttributes removeAllObjects];
     [self.columnHeights removeAllObjects];
-    
-    
+
+
     NSInteger numberOfSections = [self.collectionView numberOfSections];
     if (numberOfSections == 0) {
         return;
     }
-    
+
     for (int section = 0; section < numberOfSections; section++) {
         NSInteger columnCount = [self columnCountForSection:section];
         NSMutableArray *sectionColumnHeights = [NSMutableArray arrayWithCapacity:columnCount];
@@ -55,12 +58,11 @@ static CGFloat JWPinFloorCGFloat(CGFloat value) {
         }
         [self.columnHeights addObject:sectionColumnHeights];
     }
-    
+
     CGFloat top = 0;
     UICollectionViewLayoutAttributes *attributes;
-    
+
     for (NSInteger section = 0; section < numberOfSections; ++section) {
-        
         NSInteger columnCount = [self columnCountForSection:section];
         CGFloat width = self.collectionView.bounds.size.width;
         CGFloat itemWidth = JWPinFloorCGFloat((width - (columnCount + 1) * self.minimumSpacing) / columnCount);
@@ -78,7 +80,7 @@ static CGFloat JWPinFloorCGFloat(CGFloat value) {
             if (itemSize.height > 0 && itemSize.width > 0) {
                 itemHeight = JWPinFloorCGFloat(itemSize.height * itemWidth / itemSize.width);
             }
-            
+
             attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
             attributes.frame = CGRectMake(xOffset, yOffset, itemWidth, itemHeight);
             [itemAttributes addObject:attributes];
@@ -86,13 +88,11 @@ static CGFloat JWPinFloorCGFloat(CGFloat value) {
             self.columnHeights[section][columnIndex] = @(CGRectGetMaxY(attributes.frame) + self.minimumSpacing);
         }
         [self.sectionItemAttributes addObject:itemAttributes];
-
     }
-    
-    
 }
 
-- (NSInteger)columnCountForSection:(NSInteger)section {
+- (NSInteger)columnCountForSection:(NSInteger)section
+{
     if ([self.delegate respondsToSelector:@selector(collectionView:layout:columnCountForSection:)]) {
         return [self.delegate collectionView:self.collectionView layout:self columnCountForSection:section];
     } else {
@@ -100,10 +100,11 @@ static CGFloat JWPinFloorCGFloat(CGFloat value) {
     }
 }
 
-- (NSUInteger)nextColumnIndexForItem:(NSInteger)item inSection:(NSInteger)section {
+- (NSUInteger)nextColumnIndexForItem:(NSInteger)item inSection:(NSInteger)section
+{
     __block NSUInteger index = 0;
     __block CGFloat shortestHeight = MAXFLOAT;
-    
+
     [self.columnHeights[section] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         CGFloat height = [obj floatValue];
         if (height < shortestHeight) {
@@ -111,7 +112,7 @@ static CGFloat JWPinFloorCGFloat(CGFloat value) {
             index = idx;
         }
     }];
-    
+
     return index;
 }
 
@@ -121,7 +122,7 @@ static CGFloat JWPinFloorCGFloat(CGFloat value) {
     if (numberOfSections == 0) {
         return CGSizeZero;
     }
-    
+
     CGSize contentSize = self.collectionView.bounds.size;
     CGFloat max = 0;
     for (NSNumber *value in self.columnHeights.lastObject) {
@@ -131,7 +132,8 @@ static CGFloat JWPinFloorCGFloat(CGFloat value) {
     return contentSize;
 }
 
-- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)path {
+- (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)path
+{
     if (path.section >= [self.sectionItemAttributes count]) {
         return nil;
     }
@@ -144,32 +146,35 @@ static CGFloat JWPinFloorCGFloat(CGFloat value) {
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
 {
     NSMutableArray *attrs = [NSMutableArray array];
-    
+
     for (int i = 0; i < self.allItemAttributes.count; i++) {
         UICollectionViewLayoutAttributes *attr = self.allItemAttributes[i];
         if (CGRectIntersectsRect(rect, attr.frame)) {
             [attrs addObject:attr];
         }
     }
-    
+
     return [NSArray arrayWithArray:attrs];
 }
 
-- (NSMutableArray *)columnHeights {
+- (NSMutableArray *)columnHeights
+{
     if (!_columnHeights) {
         _columnHeights = [NSMutableArray array];
     }
     return _columnHeights;
 }
 
-- (NSMutableArray *)allItemAttributes {
+- (NSMutableArray *)allItemAttributes
+{
     if (!_allItemAttributes) {
         _allItemAttributes = [NSMutableArray array];
     }
     return _allItemAttributes;
 }
 
-- (NSMutableArray *)sectionItemAttributes {
+- (NSMutableArray *)sectionItemAttributes
+{
     if (!_sectionItemAttributes) {
         _sectionItemAttributes = [NSMutableArray array];
     }
@@ -192,8 +197,9 @@ static CGFloat JWPinFloorCGFloat(CGFloat value) {
     }
 }
 
-- (id <JWPinCollectionViewDelegateWaterfallLayout> )delegate {
-    return (id <JWPinCollectionViewDelegateWaterfallLayout> )self.collectionView.delegate;
+- (id<JWPinCollectionViewDelegateWaterfallLayout>)delegate
+{
+    return (id<JWPinCollectionViewDelegateWaterfallLayout>)self.collectionView.delegate;
 }
 
 @end

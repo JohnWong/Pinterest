@@ -8,6 +8,7 @@
 
 #import "JWPinViewUtil.h"
 
+
 @implementation JWPinViewUtil
 
 + (CGFloat)screenWidth

@@ -8,6 +8,7 @@
 
 #import "JWPinItem.h"
 
+
 @implementation JWPinner
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict
@@ -24,6 +25,7 @@
 
 @end
 
+
 @implementation JWPinImage
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict
@@ -38,6 +40,7 @@
 }
 
 @end
+
 
 @implementation JWPinItem
 
@@ -66,8 +69,8 @@ static CGFloat const minGap = 10;
         _board = dict[@"board"][@"name"];
         _pinner = [[JWPinner alloc] initWithDictionary:dict[@"pinner"]];
         unsigned long long hexInt;
-        [[NSScanner scannerWithString:dict[@"dominant_color"]]scanHexLongLong:&hexInt];
-        _dominantColor = hexInt;        
+        [[NSScanner scannerWithString:dict[@"dominant_color"]] scanHexLongLong:&hexInt];
+        _dominantColor = hexInt;
     }
     return self;
 }
@@ -98,15 +101,15 @@ static CGFloat const minGap = 10;
         if (_desc.length == 0) {
             _labelSize = CGSizeZero;
         } else {
-            _labelSize = CGSizeMake(_itemWidth -  2 * minGap, CGFLOAT_MAX);
+            _labelSize = CGSizeMake(_itemWidth - 2 * minGap, CGFLOAT_MAX);
             _labelSize = [_desc boundingRectWithSize:_labelSize
                                              options:kNilOptions
                                           attributes:@{
-                                                       NSFontAttributeName: [UIFont systemFontOfSize:9]
-                                                       }
-                                             context:nil].size;
+                                              NSFontAttributeName : [UIFont systemFontOfSize:9]
+                                          }
+                                             context:nil]
+                             .size;
         }
-        
     }
     return _labelSize;
 }
@@ -124,7 +127,6 @@ static CGFloat const minGap = 10;
     CGFloat top = self.imageSize.height + (middle > 0 ? middle + minGap : 0);
     top += 44;
     return CGSizeMake(_itemWidth, top);
-    
 }
 
 @end

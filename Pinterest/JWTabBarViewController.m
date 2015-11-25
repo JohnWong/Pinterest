@@ -8,24 +8,27 @@
 
 #import "JWTabBarViewController.h"
 
+
 @interface JWTabBarViewController ()
 
 @end
 
+
 @implementation JWTabBarViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     self.view.layer.cornerRadius = 6;
     self.view.clipsToBounds = YES;
-    
+
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
     view.backgroundColor = HEXCOLOR(0xE7E7E7);
     [self.view addSubview:view];
-    
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
