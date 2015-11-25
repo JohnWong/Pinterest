@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		522F3F411C04095E0037103C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F401C04095E0037103C /* main.m */; };
+		522F3F441C04095E0037103C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F431C04095E0037103C /* AppDelegate.m */; };
+		522F3F471C04095E0037103C /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F461C04095E0037103C /* FirstViewController.m */; };
+		522F3F4A1C04095E0037103C /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F491C04095E0037103C /* SecondViewController.m */; };
+		522F3F4D1C04095E0037103C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522F3F4B1C04095E0037103C /* Main.storyboard */; };
+		522F3F4F1C04095E0037103C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 522F3F4E1C04095E0037103C /* Assets.xcassets */; };
+		522F3F521C04095E0037103C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522F3F501C04095E0037103C /* LaunchScreen.storyboard */; };
+		522F3F5C1C040AC60037103C /* JWPinItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F5B1C040AC60037103C /* JWPinItem.m */; };
+		522F3F5E1C0410FD0037103C /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 522F3F5D1C0410FD0037103C /* data.txt */; };
+		522F3F611C0435740037103C /* JWPinCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F601C0435740037103C /* JWPinCollectionCell.m */; };
+		522F3F641C0436900037103C /* JWPinCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F631C0436900037103C /* JWPinCollectionLayout.m */; };
+		52EF94081C045F7E0026642D /* JWPinViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF94071C045F7E0026642D /* JWPinViewUtil.m */; };
+		52EF940B1C04D18D0026642D /* JWTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EF940A1C04D18D0026642D /* JWTabBarViewController.m */; };
+		80855069579631F0AE2D48D4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE374025C21DB573F9BEE4FF /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		29C374F637DDC0983A164932 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		522F3F3C1C04095E0037103C /* Pinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		522F3F401C04095E0037103C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		522F3F421C04095E0037103C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		522F3F431C04095E0037103C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		522F3F451C04095E0037103C /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		522F3F461C04095E0037103C /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		522F3F481C04095E0037103C /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		522F3F491C04095E0037103C /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		522F3F4C1C04095E0037103C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		522F3F4E1C04095E0037103C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		522F3F511C04095E0037103C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		522F3F531C04095E0037103C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		522F3F5A1C040AC60037103C /* JWPinItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPinItem.h; sourceTree = "<group>"; };
+		522F3F5B1C040AC60037103C /* JWPinItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPinItem.m; sourceTree = "<group>"; };
+		522F3F5D1C0410FD0037103C /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
+		522F3F5F1C0435740037103C /* JWPinCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPinCollectionCell.h; sourceTree = "<group>"; };
+		522F3F601C0435740037103C /* JWPinCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPinCollectionCell.m; sourceTree = "<group>"; };
+		522F3F621C0436900037103C /* JWPinCollectionLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPinCollectionLayout.h; sourceTree = "<group>"; };
+		522F3F631C0436900037103C /* JWPinCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPinCollectionLayout.m; sourceTree = "<group>"; };
+		52EF94051C0457AC0026642D /* JWPin-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWPin-PrefixHeader.pch"; sourceTree = "<group>"; };
+		52EF94061C045F7E0026642D /* JWPinViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPinViewUtil.h; sourceTree = "<group>"; };
+		52EF94071C045F7E0026642D /* JWPinViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPinViewUtil.m; sourceTree = "<group>"; };
+		52EF94091C04D18D0026642D /* JWTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTabBarViewController.h; sourceTree = "<group>"; };
+		52EF940A1C04D18D0026642D /* JWTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTabBarViewController.m; sourceTree = "<group>"; };
+		990E8697FF0B6CFE15D64E28 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EE374025C21DB573F9BEE4FF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		522F3F391C04095E0037103C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80855069579631F0AE2D48D4 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		522F3F331C04095E0037103C = {
+			isa = PBXGroup;
+			children = (
+				522F3F3E1C04095E0037103C /* Pinterest */,
+				522F3F3D1C04095E0037103C /* Products */,
+				A586D48E43D48AED2540D5D9 /* Pods */,
+				E0F32EE9B01762DFE85AD565 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		522F3F3D1C04095E0037103C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				522F3F3C1C04095E0037103C /* Pinterest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		522F3F3E1C04095E0037103C /* Pinterest */ = {
+			isa = PBXGroup;
+			children = (
+				522F3F591C040AAB0037103C /* Data */,
+				522F3F421C04095E0037103C /* AppDelegate.h */,
+				522F3F431C04095E0037103C /* AppDelegate.m */,
+				522F3F451C04095E0037103C /* FirstViewController.h */,
+				522F3F461C04095E0037103C /* FirstViewController.m */,
+				522F3F481C04095E0037103C /* SecondViewController.h */,
+				522F3F491C04095E0037103C /* SecondViewController.m */,
+				522F3F4B1C04095E0037103C /* Main.storyboard */,
+				522F3F4E1C04095E0037103C /* Assets.xcassets */,
+				522F3F501C04095E0037103C /* LaunchScreen.storyboard */,
+				522F3F531C04095E0037103C /* Info.plist */,
+				522F3F3F1C04095E0037103C /* Supporting Files */,
+				522F3F5F1C0435740037103C /* JWPinCollectionCell.h */,
+				522F3F601C0435740037103C /* JWPinCollectionCell.m */,
+				522F3F621C0436900037103C /* JWPinCollectionLayout.h */,
+				522F3F631C0436900037103C /* JWPinCollectionLayout.m */,
+				52EF94051C0457AC0026642D /* JWPin-PrefixHeader.pch */,
+				52EF94061C045F7E0026642D /* JWPinViewUtil.h */,
+				52EF94071C045F7E0026642D /* JWPinViewUtil.m */,
+				52EF94091C04D18D0026642D /* JWTabBarViewController.h */,
+				52EF940A1C04D18D0026642D /* JWTabBarViewController.m */,
+			);
+			path = Pinterest;
+			sourceTree = "<group>";
+		};
+		522F3F3F1C04095E0037103C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				522F3F401C04095E0037103C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		522F3F591C040AAB0037103C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				522F3F5D1C0410FD0037103C /* data.txt */,
+				522F3F5A1C040AC60037103C /* JWPinItem.h */,
+				522F3F5B1C040AC60037103C /* JWPinItem.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A586D48E43D48AED2540D5D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				990E8697FF0B6CFE15D64E28 /* Pods.debug.xcconfig */,
+				29C374F637DDC0983A164932 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E0F32EE9B01762DFE85AD565 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE374025C21DB573F9BEE4FF /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		522F3F3B1C04095E0037103C /* Pinterest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 522F3F561C04095E0037103C /* Build configuration list for PBXNativeTarget "Pinterest" */;
+			buildPhases = (
+				C67244BAC21D53EC6BDE0B05 /* Check Pods Manifest.lock */,
+				522F3F381C04095E0037103C /* Sources */,
+				522F3F391C04095E0037103C /* Frameworks */,
+				522F3F3A1C04095E0037103C /* Resources */,
+				D6DC85ED3C2CD358D16E7E6A /* Embed Pods Frameworks */,
+				CC2C9DD268F8E3C09D1CD68C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pinterest;
+			productName = Pinterest;
+			productReference = 522F3F3C1C04095E0037103C /* Pinterest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		522F3F341C04095E0037103C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "John Wong";
+				TargetAttributes = {
+					522F3F3B1C04095E0037103C = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 522F3F371C04095E0037103C /* Build configuration list for PBXProject "Pinterest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 522F3F331C04095E0037103C;
+			productRefGroup = 522F3F3D1C04095E0037103C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				522F3F3B1C04095E0037103C /* Pinterest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		522F3F3A1C04095E0037103C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522F3F5E1C0410FD0037103C /* data.txt in Resources */,
+				522F3F521C04095E0037103C /* LaunchScreen.storyboard in Resources */,
+				522F3F4F1C04095E0037103C /* Assets.xcassets in Resources */,
+				522F3F4D1C04095E0037103C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C67244BAC21D53EC6BDE0B05 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC2C9DD268F8E3C09D1CD68C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6DC85ED3C2CD358D16E7E6A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		522F3F381C04095E0037103C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				522F3F5C1C040AC60037103C /* JWPinItem.m in Sources */,
+				522F3F641C0436900037103C /* JWPinCollectionLayout.m in Sources */,
+				522F3F4A1C04095E0037103C /* SecondViewController.m in Sources */,
+				52EF940B1C04D18D0026642D /* JWTabBarViewController.m in Sources */,
+				52EF94081C045F7E0026642D /* JWPinViewUtil.m in Sources */,
+				522F3F611C0435740037103C /* JWPinCollectionCell.m in Sources */,
+				522F3F441C04095E0037103C /* AppDelegate.m in Sources */,
+				522F3F471C04095E0037103C /* FirstViewController.m in Sources */,
+				522F3F411C04095E0037103C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		522F3F4B1C04095E0037103C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				522F3F4C1C04095E0037103C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		522F3F501C04095E0037103C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				522F3F511C04095E0037103C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		522F3F541C04095E0037103C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		522F3F551C04095E0037103C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		522F3F571C04095E0037103C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 990E8697FF0B6CFE15D64E28 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Pinterest/JWPin-PrefixHeader.pch";
+				INFOPLIST_FILE = Pinterest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnwong.pinterest.Pinterest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		522F3F581C04095E0037103C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29C374F637DDC0983A164932 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Pinterest/JWPin-PrefixHeader.pch";
+				INFOPLIST_FILE = Pinterest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnwong.pinterest.Pinterest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		522F3F371C04095E0037103C /* Build configuration list for PBXProject "Pinterest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				522F3F541C04095E0037103C /* Debug */,
+				522F3F551C04095E0037103C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		522F3F561C04095E0037103C /* Build configuration list for PBXNativeTarget "Pinterest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				522F3F571C04095E0037103C /* Debug */,
+				522F3F581C04095E0037103C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 522F3F341C04095E0037103C /* Project object */;
+}
