@@ -21,10 +21,6 @@
     [super viewDidLoad];
     self.view.layer.cornerRadius = 6;
     self.view.clipsToBounds = YES;
-
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
-    view.backgroundColor = HEXCOLOR(0xE7E7E7);
-    [self.view addSubview:view];
 }
 
 - (void)didReceiveMemoryWarning

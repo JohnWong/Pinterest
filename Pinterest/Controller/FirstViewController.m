@@ -25,15 +25,23 @@ static NSString *const kJWReuseIdentifier = @"Pin";
     UICollectionView *_collectionView;
     UIRefreshControl *_refreshControl;
     NSArray<JWPinItem *> *_data;
+    UIView *_topBar;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
-
+    _topBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 20)];
+    _topBar.backgroundColor = HEXCOLOR(0xE7E7E7);
+    [self.view addSubview:_topBar];
+    
     _data = [JWPinItem loadSampleData];
-    _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:[[JWPinCollectionLayout alloc] init]];
+    
+    CGRect frame = self.view.bounds;
+    frame.origin.y += _topBar.height;
+    frame.size.height -= _topBar.height;
+    _collectionView = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:[[JWPinCollectionLayout alloc] init]];
     _collectionView.contentInset = UIEdgeInsetsMake(0, 0, self.tabBarController.tabBar.frame.size.height, 0);
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
@@ -48,16 +56,6 @@ static NSString *const kJWReuseIdentifier = @"Pin";
     [_refreshControl addTarget:self action:@selector(reload) forControlEvents:UIControlEventValueChanged];
     
     [self.view addSubview:[[YYFPSLabel alloc] initWithFrame:CGRectMake(16, self.view.height - 50 - self.tabBarController.tabBar.height, 0, 0)]];
-}
-
-- (void)viewDidLayoutSubviews
-{
-    CGRect frame = self.view.frame;
-    if (frame.origin.y != 20) {
-        frame.origin.y += 20;
-        frame.size.height -= 20;
-        self.view.frame = frame;
-    }
 }
 
 - (void)didReceiveMemoryWarning
