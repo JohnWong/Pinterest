@@ -62,14 +62,14 @@ static CGFloat const minGap = 10;
 {
     self = [super init];
     if (self) {
-        _image = [[JWPinImage alloc] initWithDictionary:dict[@"images"][@"640x"]];
+        _image = [[JWPinImage alloc] initWithDictionary:dict[@"images"][@"290x"]];
         _pid = dict[@"id"];
         _desc = [dict[@"description"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
         _repinCount = [dict[@"repin_count"] integerValue];
         _board = dict[@"board"][@"name"];
         _pinner = [[JWPinner alloc] initWithDictionary:dict[@"pinner"]];
         unsigned long long hexInt;
-        [[NSScanner scannerWithString:dict[@"dominant_color"]] scanHexLongLong:&hexInt];
+        [[NSScanner scannerWithString:[dict[@"dominant_color"] substringFromIndex:1]] scanHexLongLong:&hexInt];
         _dominantColor = hexInt;
     }
     return self;

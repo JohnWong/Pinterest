@@ -134,6 +134,8 @@ static CGFloat const minGap = 10;
         [self addSubview:_seperator];
 
         _pinnerImage = [[UIImageView alloc] initWithFrame:CGRectMake(minGap, minGap, 24, 24)];
+        _pinnerImage.layer.cornerRadius = 2;
+        _pinnerImage.clipsToBounds = YES;
         _pinnerImage.backgroundColor = [UIColor lightGrayColor];
         [self addSubview:_pinnerImage];
 
