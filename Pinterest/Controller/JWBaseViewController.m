@@ -1,27 +1,25 @@
 //
-//  FirstViewController.m
+//  JWBaseViewController.m
 //  Pinterest
 //
 //  Created by John Wong on 11/24/15.
 //  Copyright © 2015 John Wong. All rights reserved.
 //
 
-#import "FirstViewController.h"
-#import "JWPinItem.h"
-#import "JWPinCollectionCell.h"
+#import "JWBaseViewController.h"
 #import "JWPinCollectionLayout.h"
 #import "JWPinViewUtil.h"
 #import "YYFPSLabel.h"
 
 
-@interface FirstViewController () <UICollectionViewDataSource, JWPinCollectionViewDelegateWaterfallLayout>
+@interface JWBaseViewController () <UICollectionViewDataSource, JWPinCollectionViewDelegateWaterfallLayout>
 
 @end
 
 static NSString *const kJWReuseIdentifier = @"Pin";
 
 
-@implementation FirstViewController {
+@implementation JWBaseViewController {
     UICollectionView *_collectionView;
     UIRefreshControl *_refreshControl;
     NSArray<JWPinItem *> *_data;
@@ -47,7 +45,7 @@ static NSString *const kJWReuseIdentifier = @"Pin";
     _collectionView.delegate = self;
     _collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     _collectionView.backgroundColor = HEXCOLOR(0xE7E7E7);
-    [_collectionView registerClass:[JWPinCollectionCell class] forCellWithReuseIdentifier:kJWReuseIdentifier];
+    [_collectionView registerClass:[self cellClass] forCellWithReuseIdentifier:kJWReuseIdentifier];
     [self.view addSubview:_collectionView];
     [_collectionView reloadData];
 
@@ -58,10 +56,10 @@ static NSString *const kJWReuseIdentifier = @"Pin";
     [self.view addSubview:[[YYFPSLabel alloc] initWithFrame:CGRectMake(16, self.view.height - 30 - self.tabBarController.tabBar.height, 0, 0)]];
 }
 
-- (void)didReceiveMemoryWarning
+- (Class<JWPinWaterFallCell>)cellClass
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSAssert(NO, @"Must be override by sub class");
+    return nil;
 }
 
 - (void)reload
@@ -81,7 +79,7 @@ static NSString *const kJWReuseIdentifier = @"Pin";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     JWPinItem *item = _data[indexPath.row];
-    JWPinCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kJWReuseIdentifier forIndexPath:indexPath];
+    UICollectionViewCell<JWPinWaterFallCell> *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kJWReuseIdentifier forIndexPath:indexPath];
     [cell setItem:item];
     return cell;
 }

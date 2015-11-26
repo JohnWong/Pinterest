@@ -1,24 +1,24 @@
 //
-//  JWPinCollectionCell.m
+//  JWADKCollectionCell.m
 //  Pinterest
 //
-//  Created by John Wong on 11/24/15.
+//  Created by John Wong on 11/26/15.
 //  Copyright © 2015 John Wong. All rights reserved.
 //
 
-#import "JWPinCollectionCell.h"
+#import "JWADKCollectionCell.h"
 #import "UIImageView+WebCache.h"
 
 static CGFloat const minGap = 10;
 
-@interface JWPinImageView : UIView
+@interface JWADKImageView : UIView
 
 @property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
 
-@implementation JWPinImageView
+@implementation JWADKImageView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -40,14 +40,14 @@ static CGFloat const minGap = 10;
 @end
 
 
-@interface JWPinDescriptionView : UIView
+@interface JWADKDescriptionView : UIView
 
 @property (nonatomic, strong) UILabel *descLabel;
 
 @end
 
 
-@implementation JWPinDescriptionView
+@implementation JWADKDescriptionView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -74,7 +74,7 @@ static CGFloat const minGap = 10;
 @end
 
 
-@interface JWPinCountsView : UIView
+@interface JWADKCountsView : UIView
 
 @property (nonatomic, strong) UIImageView *repinImageView;
 @property (nonatomic, strong) UILabel *repinLabel;
@@ -84,7 +84,7 @@ static CGFloat const minGap = 10;
 @end
 
 
-@implementation JWPinCountsView
+@implementation JWADKCountsView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -93,7 +93,7 @@ static CGFloat const minGap = 10;
         _repinImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"closeup-repins-icon"]];
         _repinImageView.left = minGap;
         [self addSubview:_repinImageView];
-
+        
         _repinLabel = [[UILabel alloc] initWithFrame:CGRectMake(_repinImageView.right + 2, 0, 0, 12)];
         _repinLabel.textColor = HEXCOLOR(0xB9B9B9);
         _repinLabel.font = [UIFont boldSystemFontOfSize:12];
@@ -111,7 +111,7 @@ static CGFloat const minGap = 10;
 @end
 
 
-@interface JWPinnerView : UIView
+@interface JWADKnerView : UIView
 
 @property (nonatomic, strong) UIImageView *pinnerImage;
 @property (nonatomic, strong) UILabel *pinnerName;
@@ -121,7 +121,7 @@ static CGFloat const minGap = 10;
 @end
 
 
-@implementation JWPinnerView
+@implementation JWADKnerView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -130,19 +130,19 @@ static CGFloat const minGap = 10;
         _seperator = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, kOnePix)];
         _seperator.backgroundColor = HEXCOLOR(0xe0e1e2);
         [self addSubview:_seperator];
-
+        
         _pinnerImage = [[UIImageView alloc] initWithFrame:CGRectMake(minGap, minGap, 24, 24)];
         _pinnerImage.layer.cornerRadius = 2;
         _pinnerImage.clipsToBounds = YES;
         _pinnerImage.backgroundColor = [UIColor lightGrayColor];
         [self addSubview:_pinnerImage];
-
+        
         _pick = [[UILabel alloc] initWithFrame:CGRectMake(_pinnerImage.right + 5, _pinnerImage.top, self.width - _pinnerImage.right - minGap, 12)];
         _pick.font = [UIFont systemFontOfSize:9];
         _pick.textColor = [UIColor blackColor];
         _pick.text = @"Picked for your";
         [self addSubview:_pick];
-
+        
         _pinnerName = [[UILabel alloc] initWithFrame:CGRectMake(_pick.left, _pick.bottom, _pick.width, 12)];
         _pinnerName.font = [UIFont boldSystemFontOfSize:9];
         _pinnerName.textColor = [UIColor blackColor];
@@ -162,11 +162,11 @@ static CGFloat const minGap = 10;
 @end
 
 
-@implementation JWPinCollectionCell {
-    JWPinImageView *_imageView;
-    JWPinDescriptionView *_descView;
-    JWPinCountsView *_countView;
-    JWPinnerView *_pinnerView;
+@implementation JWADKCollectionCell {
+    JWADKImageView *_imageView;
+    JWADKDescriptionView *_descView;
+    JWADKCountsView *_countView;
+    JWADKnerView *_pinnerView;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -178,17 +178,17 @@ static CGFloat const minGap = 10;
         self.layer.borderColor = HEXCOLOR(0x979899).CGColor;
         self.layer.borderWidth = kOnePix;
         self.clipsToBounds = YES;
-
-        _imageView = [[JWPinImageView alloc] initWithFrame:CGRectZero];
+        
+        _imageView = [[JWADKImageView alloc] initWithFrame:CGRectZero];
         [self addSubview:_imageView];
-
-        _descView = [[JWPinDescriptionView alloc] initWithFrame:CGRectZero];
+        
+        _descView = [[JWADKDescriptionView alloc] initWithFrame:CGRectZero];
         [self addSubview:_descView];
-
-        _countView = [[JWPinCountsView alloc] initWithFrame:CGRectZero];
+        
+        _countView = [[JWADKCountsView alloc] initWithFrame:CGRectZero];
         [self addSubview:_countView];
-
-        _pinnerView = [[JWPinnerView alloc] initWithFrame:CGRectMake(minGap, minGap, self.width - minGap * 2, 24)];
+        
+        _pinnerView = [[JWADKnerView alloc] initWithFrame:CGRectMake(minGap, minGap, self.width - minGap * 2, 24)];
         [self addSubview:_pinnerView];
     }
     return self;
@@ -199,9 +199,9 @@ static CGFloat const minGap = 10;
     _imageView.frame = (CGRect){CGPointZero, item.imageSize};
     _imageView.backgroundColor = HEXCOLOR(item.dominantColor);
     [_imageView.imageView sd_setImageWithURL:[NSURL URLWithString:item.image.url]];
-
+    
     CGFloat top = _imageView.bottom + minGap;
-
+    
     if (item.desc.length > 0) {
         _descView.hidden = NO;
         CGRect frame = CGRectMake(0, top, item.itemWidth, item.labelSize.height);
@@ -211,7 +211,7 @@ static CGFloat const minGap = 10;
     } else {
         _descView.hidden = YES;
     }
-
+    
     if (item.repinCount) {
         _countView.frame = CGRectMake(0, top, item.itemWidth, 12);
         [_countView setRepinCount:item.repinCount];
@@ -220,7 +220,7 @@ static CGFloat const minGap = 10;
     } else {
         _countView.hidden = YES;
     }
-
+    
     if (top == _imageView.bottom + minGap) {
         top = _imageView.bottom;
     }

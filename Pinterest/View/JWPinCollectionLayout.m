@@ -59,9 +59,7 @@ static CGFloat JWPinFloorCGFloat(CGFloat value)
         [self.columnHeights addObject:sectionColumnHeights];
     }
 
-    CGFloat top = 0;
     UICollectionViewLayoutAttributes *attributes;
-
     for (NSInteger section = 0; section < numberOfSections; ++section) {
         NSInteger columnCount = [self columnCountForSection:section];
         CGFloat width = self.collectionView.bounds.size.width;
