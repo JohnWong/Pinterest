@@ -10,6 +10,7 @@
 		521BFBB01C06B31600080E8B /* JWPinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521BFBAF1C06B31600080E8B /* JWPinViewController.m */; };
 		521BFBB31C06B49700080E8B /* JWADKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521BFBB21C06B49700080E8B /* JWADKViewController.m */; };
 		521BFBB61C06B4F500080E8B /* JWADKCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 521BFBB51C06B4F500080E8B /* JWADKCollectionCell.m */; };
+		521BFBC91C06D48100080E8B /* ASDisplayNode+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 521BFBC81C06D48100080E8B /* ASDisplayNode+RSAdditions.m */; };
 		522F3F411C04095E0037103C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F401C04095E0037103C /* main.m */; };
 		522F3F441C04095E0037103C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F431C04095E0037103C /* AppDelegate.m */; };
 		522F3F4D1C04095E0037103C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522F3F4B1C04095E0037103C /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 		521BFBB21C06B49700080E8B /* JWADKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWADKViewController.m; sourceTree = "<group>"; };
 		521BFBB41C06B4F500080E8B /* JWADKCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWADKCollectionCell.h; sourceTree = "<group>"; };
 		521BFBB51C06B4F500080E8B /* JWADKCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWADKCollectionCell.m; sourceTree = "<group>"; };
+		521BFBC71C06D48100080E8B /* ASDisplayNode+RSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ASDisplayNode+RSAdditions.h"; sourceTree = "<group>"; };
+		521BFBC81C06D48100080E8B /* ASDisplayNode+RSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ASDisplayNode+RSAdditions.m"; sourceTree = "<group>"; };
 		522F3F3C1C04095E0037103C /* Pinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522F3F401C04095E0037103C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		522F3F421C04095E0037103C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 		52F6FB081C05C74B0075E446 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				521BFBC71C06D48100080E8B /* ASDisplayNode+RSAdditions.h */,
+				521BFBC81C06D48100080E8B /* ASDisplayNode+RSAdditions.m */,
 				52F6FB091C05C74B0075E446 /* JWPinCollectionCell.h */,
 				52F6FB0A1C05C74B0075E446 /* JWPinCollectionCell.m */,
 				52F6FB0B1C05C74B0075E446 /* JWPinCollectionLayout.h */,
@@ -321,6 +326,7 @@
 				52F6FB131C05C74B0075E446 /* JWPinCollectionLayout.m in Sources */,
 				522F3F411C04095E0037103C /* main.m in Sources */,
 				521BFBB01C06B31600080E8B /* JWPinViewController.m in Sources */,
+				521BFBC91C06D48100080E8B /* ASDisplayNode+RSAdditions.m in Sources */,
 				52F6FB191C05C7960075E446 /* YYFPSLabel.m in Sources */,
 				52F6FB0F1C05C74B0075E446 /* JWBaseViewController.m in Sources */,
 				52F6FB101C05C74B0075E446 /* JWTabBarViewController.m in Sources */,

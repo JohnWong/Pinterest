@@ -8,13 +8,16 @@
 
 #import "JWADKCollectionCell.h"
 #import "UIImageView+WebCache.h"
+#import "AsyncDisplayKit.h"
+#import "ASDisplayNode+RSAdditions.h"
+#import "WebASDKImageManager.h"
 
 static CGFloat const minGap = 10;
 
 
-@interface JWADKImageView : UIView
+@interface JWADKImageView : ASDisplayNode
 
-@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) ASNetworkImageNode *imageView;
 
 @end
 
@@ -23,11 +26,14 @@ static CGFloat const minGap = 10;
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
-        _imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+        self.layerBacked = YES;
+        [self setFrame:frame];
+        _imageView = [[ASNetworkImageNode alloc] initWithWebImage];
+        _imageView.layerBacked = YES;
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
-        [self addSubview:_imageView];
+        [self addSubnode:_imageView];
     }
     return self;
 }
@@ -41,9 +47,9 @@ static CGFloat const minGap = 10;
 @end
 
 
-@interface JWADKDescriptionView : UIView
+@interface JWADKDescriptionView : ASDisplayNode
 
-@property (nonatomic, strong) UILabel *descLabel;
+@property (nonatomic, strong) ASTextNode *descLabel;
 
 @end
 
@@ -52,12 +58,13 @@ static CGFloat const minGap = 10;
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
-        _descLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-        _descLabel.font = [UIFont systemFontOfSize:9];
-        _descLabel.textColor = [UIColor blackColor];
-        [self addSubview:_descLabel];
+        self.layerBacked = YES;
+        [self setFrame:frame];
+        _descLabel = [[ASTextNode alloc] init];
+        _descLabel.layerBacked = YES;
+        [self addSubnode:_descLabel];
     }
     return self;
 }
@@ -75,10 +82,10 @@ static CGFloat const minGap = 10;
 @end
 
 
-@interface JWADKCountsView : UIView
+@interface JWADKCountsView : ASDisplayNode
 
-@property (nonatomic, strong) UIImageView *repinImageView;
-@property (nonatomic, strong) UILabel *repinLabel;
+@property (nonatomic, strong) ASImageNode *repinImageView;
+@property (nonatomic, strong) ASTextNode *repinLabel;
 
 - (void)setRepinCount:(NSInteger)count;
 
@@ -89,35 +96,43 @@ static CGFloat const minGap = 10;
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
-        _repinImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"closeup-repins-icon"]];
+        self.layerBacked = YES;
+        [self setFrame:frame];
+        _repinImageView = [[ASImageNode alloc] init];
+        _repinImageView.layerBacked = YES;
+        _repinImageView.image = [UIImage imageNamed:@"closeup-repins-icon"];
         _repinImageView.left = minGap;
-        [self addSubview:_repinImageView];
+        [self addSubnode:_repinImageView];
 
-        _repinLabel = [[UILabel alloc] initWithFrame:CGRectMake(_repinImageView.right + 2, 0, 0, 12)];
-        _repinLabel.textColor = HEXCOLOR(0xB9B9B9);
-        _repinLabel.font = [UIFont boldSystemFontOfSize:12];
-        [self addSubview:_repinLabel];
+        _repinLabel = [[ASTextNode alloc] init];
+        _repinLabel.layerBacked = YES;
+        _repinLabel.frame = CGRectMake(_repinImageView.right + 2, 0, 0, 12);
+        [self addSubnode:_repinLabel];
     }
     return self;
 }
 
 - (void)setRepinCount:(NSInteger)count
 {
-    _repinLabel.text = [NSString stringWithFormat:@"%@", @(count)];
-    [_repinLabel sizeToFit];
+    _repinLabel.attributedString = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@", @(count)]
+                                                                   attributes:@{
+                                                                       NSFontAttributeName : [UIFont boldSystemFontOfSize:12],
+                                                                       NSForegroundColorAttributeName : HEXCOLOR(0xB9B9B9)
+                                                                   }];
+    _repinLabel.frame = (CGRect){CGPointMake(_repinImageView.right + 2, 0), [_repinLabel measure:CGSizeMake(CGFLOAT_MAX, CGFLOAT_MAX)]};
 }
 
 @end
 
 
-@interface JWADKnerView : UIView
+@interface JWADKnerView : ASDisplayNode
 
-@property (nonatomic, strong) UIImageView *pinnerImage;
-@property (nonatomic, strong) UILabel *pinnerName;
-@property (nonatomic, strong) UILabel *pick;
-@property (nonatomic, strong) UIView *seperator;
+@property (nonatomic, strong) ASNetworkImageNode *pinnerImage;
+@property (nonatomic, strong) ASTextNode *pinnerName;
+@property (nonatomic, strong) ASTextNode *pick;
+@property (nonatomic, strong) ASDisplayNode *seperator;
 
 @end
 
@@ -126,28 +141,38 @@ static CGFloat const minGap = 10;
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self) {
-        _seperator = [[UIView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, kOnePix)];
+        self.layerBacked = YES;
+        [self setFrame:frame];
+        _seperator = [[ASDisplayNode alloc] init];
+        _seperator.layerBacked = YES;
+        _seperator.frame = CGRectMake(0, 0, frame.size.width, kOnePix);
         _seperator.backgroundColor = HEXCOLOR(0xe0e1e2);
-        [self addSubview:_seperator];
+        [self addSubnode:_seperator];
 
-        _pinnerImage = [[UIImageView alloc] initWithFrame:CGRectMake(minGap, minGap, 24, 24)];
+        _pinnerImage = [[ASNetworkImageNode alloc] initWithWebImage];
+        _pinnerImage.layerBacked = YES;
+        _pinnerImage.frame = CGRectMake(minGap, minGap, 24, 24);
         _pinnerImage.layer.cornerRadius = 2;
         _pinnerImage.clipsToBounds = YES;
         _pinnerImage.backgroundColor = [UIColor lightGrayColor];
-        [self addSubview:_pinnerImage];
+        [self addSubnode:_pinnerImage];
 
-        _pick = [[UILabel alloc] initWithFrame:CGRectMake(_pinnerImage.right + 5, _pinnerImage.top, self.width - _pinnerImage.right - minGap, 12)];
-        _pick.font = [UIFont systemFontOfSize:9];
-        _pick.textColor = [UIColor blackColor];
-        _pick.text = @"Picked for your";
-        [self addSubview:_pick];
+        _pick = [[ASTextNode alloc] init];
+        _pick.layerBacked = YES;
+        _pick.frame = CGRectMake(_pinnerImage.right + 5, _pinnerImage.top, self.width - _pinnerImage.right - minGap, 12);
+        _pick.attributedString = [[NSAttributedString alloc] initWithString:@"Picked for your"
+                                                                 attributes:@{
+                                                                     NSFontAttributeName : [UIFont systemFontOfSize:9],
+                                                                     NSForegroundColorAttributeName : [UIColor blackColor]
+                                                                 }];
+        [self addSubnode:_pick];
 
-        _pinnerName = [[UILabel alloc] initWithFrame:CGRectMake(_pick.left, _pick.bottom, _pick.width, 12)];
-        _pinnerName.font = [UIFont boldSystemFontOfSize:9];
-        _pinnerName.textColor = [UIColor blackColor];
-        [self addSubview:_pinnerName];
+        _pinnerName = [[ASTextNode alloc] init];
+        _pinnerName.layerBacked = YES;
+        _pinnerName.frame = CGRectMake(_pick.left, _pick.bottom, _pick.width, 12);
+        [self addSubnode:_pinnerName];
     }
     return self;
 }
@@ -181,16 +206,16 @@ static CGFloat const minGap = 10;
         self.clipsToBounds = YES;
 
         _imageView = [[JWADKImageView alloc] initWithFrame:CGRectZero];
-        [self addSubview:_imageView];
+        [self addSubnode:_imageView];
 
         _descView = [[JWADKDescriptionView alloc] initWithFrame:CGRectZero];
-        [self addSubview:_descView];
+        [self addSubnode:_descView];
 
         _countView = [[JWADKCountsView alloc] initWithFrame:CGRectZero];
-        [self addSubview:_countView];
+        [self addSubnode:_countView];
 
         _pinnerView = [[JWADKnerView alloc] initWithFrame:CGRectMake(minGap, minGap, self.width - minGap * 2, 24)];
-        [self addSubview:_pinnerView];
+        [self addSubnode:_pinnerView];
     }
     return self;
 }
@@ -199,7 +224,7 @@ static CGFloat const minGap = 10;
 {
     _imageView.frame = (CGRect){CGPointZero, item.imageSize};
     _imageView.backgroundColor = HEXCOLOR(item.dominantColor);
-    [_imageView.imageView sd_setImageWithURL:[NSURL URLWithString:item.image.url]];
+    [_imageView.imageView setURL:[NSURL URLWithString:item.image.url]];
 
     CGFloat top = _imageView.bottom + minGap;
 
@@ -207,7 +232,11 @@ static CGFloat const minGap = 10;
         _descView.hidden = NO;
         CGRect frame = CGRectMake(0, top, item.itemWidth, item.labelSize.height);
         _descView.frame = frame;
-        _descView.descLabel.text = item.desc;
+        _descView.descLabel.attributedString = [[NSAttributedString alloc] initWithString:item.desc
+                                                                               attributes:@{
+                                                                                   NSFontAttributeName : [UIFont systemFontOfSize:9],
+                                                                                   NSForegroundColorAttributeName : [UIColor blackColor]
+                                                                               }];
         top += _descView.height + minGap;
     } else {
         _descView.hidden = YES;
@@ -226,8 +255,13 @@ static CGFloat const minGap = 10;
         top = _imageView.bottom;
     }
     _pinnerView.frame = CGRectMake(0, top, item.itemWidth, 44);
-    [_pinnerView.pinnerImage sd_setImageWithURL:[NSURL URLWithString:item.pinner.imageLargeUrl]];
-    _pinnerView.pinnerName.text = item.pinner.fullName;
+    [_pinnerView.pinnerImage setURL:[NSURL URLWithString:item.pinner.imageLargeUrl]];
+
+    _pinnerView.pinnerName.attributedString = [[NSAttributedString alloc] initWithString:item.pinner.fullName
+                                                                              attributes:@{
+                                                                                  NSFontAttributeName : [UIFont systemFontOfSize:9],
+                                                                                  NSForegroundColorAttributeName : [UIColor blackColor]
+                                                                              }];
 }
 
 
