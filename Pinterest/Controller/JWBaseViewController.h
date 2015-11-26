@@ -15,6 +15,7 @@
 
 @end
 
+
 @interface JWBaseViewController : UIViewController
 
 - (Class<JWPinWaterFallCell>)cellClass;

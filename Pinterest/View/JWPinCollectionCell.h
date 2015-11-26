@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JWBaseViewController.h"
 
+
 @interface JWPinCollectionCell : UICollectionViewCell <JWPinWaterFallCell>
 
 @end

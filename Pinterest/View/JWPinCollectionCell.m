@@ -11,6 +11,7 @@
 
 static CGFloat const minGap = 10;
 
+
 @interface JWPinImageView : UIView
 
 @property (nonatomic, strong) UIImageView *imageView;

@@ -9,6 +9,7 @@
 #import "JWPinViewController.h"
 #import "JWPinCollectionCell.h"
 
+
 @implementation JWPinViewController
 
 - (Class<JWPinWaterFallCell>)cellClass

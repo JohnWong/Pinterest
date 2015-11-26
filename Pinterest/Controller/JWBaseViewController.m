@@ -33,9 +33,9 @@ static NSString *const kJWReuseIdentifier = @"Pin";
     _topBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 20)];
     _topBar.backgroundColor = HEXCOLOR(0xE7E7E7);
     [self.view addSubview:_topBar];
-    
+
     _data = [JWPinItem loadSampleData];
-    
+
     CGRect frame = self.view.bounds;
     frame.origin.y += _topBar.height;
     frame.size.height -= _topBar.height;
@@ -52,7 +52,7 @@ static NSString *const kJWReuseIdentifier = @"Pin";
     _refreshControl = [[UIRefreshControl alloc] init];
     [_collectionView addSubview:_refreshControl];
     [_refreshControl addTarget:self action:@selector(reload) forControlEvents:UIControlEventValueChanged];
-    
+
     [self.view addSubview:[[YYFPSLabel alloc] initWithFrame:CGRectMake(16, self.view.height - 30 - self.tabBarController.tabBar.height, 0, 0)]];
 }
 
