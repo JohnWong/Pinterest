@@ -1,5 +1,5 @@
 //
-//  JWADKCollectionCell.h
+//  JWASDKCollectionCell.h
 //  Pinterest
 //
 //  Created by John Wong on 11/26/15.
@@ -10,6 +10,6 @@
 #import "JWBaseViewController.h"
 
 
-@interface JWADKCollectionCell : UICollectionViewCell <JWPinWaterFallCell>
+@interface JWASDKCollectionCell : UICollectionViewCell <JWPinWaterFallCell>
 
 @end

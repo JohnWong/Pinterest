@@ -22,6 +22,11 @@
     self.view.layer.cornerRadius = 6;
     self.view.clipsToBounds = YES;
 
+    self.tabBar.items[0].image = [[UIImage imageNamed:@"tab-bar-home"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.tabBar.items[0].selectedImage = [[UIImage imageNamed:@"tab-bar-home-selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.tabBar.items[1].image = [[UIImage imageNamed:@"tab-bar-explore"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.tabBar.items[1].selectedImage = [[UIImage imageNamed:@"tab-bar-explore-selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
     for (UITabBarItem *item in self.tabBar.items) {
         item.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
     }

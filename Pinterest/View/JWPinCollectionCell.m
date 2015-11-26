@@ -55,6 +55,7 @@ static CGFloat const minGap = 10;
     self = [super initWithFrame:frame];
     if (self) {
         _descLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+        _descLabel.numberOfLines = 0;
         _descLabel.font = [UIFont systemFontOfSize:9];
         _descLabel.textColor = [UIColor blackColor];
         [self addSubview:_descLabel];

@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		521BFBB01C06B31600080E8B /* JWPinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521BFBAF1C06B31600080E8B /* JWPinViewController.m */; };
-		521BFBB31C06B49700080E8B /* JWADKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521BFBB21C06B49700080E8B /* JWADKViewController.m */; };
-		521BFBB61C06B4F500080E8B /* JWADKCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 521BFBB51C06B4F500080E8B /* JWADKCollectionCell.m */; };
+		521BFBB31C06B49700080E8B /* JWASDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 521BFBB21C06B49700080E8B /* JWASDKViewController.m */; };
+		521BFBB61C06B4F500080E8B /* JWASDKCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 521BFBB51C06B4F500080E8B /* JWASDKCollectionCell.m */; };
 		521BFBC91C06D48100080E8B /* ASDisplayNode+RSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 521BFBC81C06D48100080E8B /* ASDisplayNode+RSAdditions.m */; };
 		522F3F411C04095E0037103C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F401C04095E0037103C /* main.m */; };
 		522F3F441C04095E0037103C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 522F3F431C04095E0037103C /* AppDelegate.m */; };
@@ -32,10 +32,10 @@
 		29C374F637DDC0983A164932 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		521BFBAE1C06B31600080E8B /* JWPinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPinViewController.h; sourceTree = "<group>"; };
 		521BFBAF1C06B31600080E8B /* JWPinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWPinViewController.m; sourceTree = "<group>"; };
-		521BFBB11C06B49700080E8B /* JWADKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWADKViewController.h; sourceTree = "<group>"; };
-		521BFBB21C06B49700080E8B /* JWADKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWADKViewController.m; sourceTree = "<group>"; };
-		521BFBB41C06B4F500080E8B /* JWADKCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWADKCollectionCell.h; sourceTree = "<group>"; };
-		521BFBB51C06B4F500080E8B /* JWADKCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWADKCollectionCell.m; sourceTree = "<group>"; };
+		521BFBB11C06B49700080E8B /* JWASDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWASDKViewController.h; sourceTree = "<group>"; };
+		521BFBB21C06B49700080E8B /* JWASDKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWASDKViewController.m; sourceTree = "<group>"; };
+		521BFBB41C06B4F500080E8B /* JWASDKCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWASDKCollectionCell.h; sourceTree = "<group>"; };
+		521BFBB51C06B4F500080E8B /* JWASDKCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWASDKCollectionCell.m; sourceTree = "<group>"; };
 		521BFBC71C06D48100080E8B /* ASDisplayNode+RSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ASDisplayNode+RSAdditions.h"; sourceTree = "<group>"; };
 		521BFBC81C06D48100080E8B /* ASDisplayNode+RSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ASDisplayNode+RSAdditions.m"; sourceTree = "<group>"; };
 		522F3F3C1C04095E0037103C /* Pinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,8 +144,8 @@
 				52F6FB041C05C74B0075E446 /* JWTabBarViewController.m */,
 				521BFBAE1C06B31600080E8B /* JWPinViewController.h */,
 				521BFBAF1C06B31600080E8B /* JWPinViewController.m */,
-				521BFBB11C06B49700080E8B /* JWADKViewController.h */,
-				521BFBB21C06B49700080E8B /* JWADKViewController.m */,
+				521BFBB11C06B49700080E8B /* JWASDKViewController.h */,
+				521BFBB21C06B49700080E8B /* JWASDKViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,8 +172,8 @@
 				52F6FB0C1C05C74B0075E446 /* JWPinCollectionLayout.m */,
 				52F6FB0D1C05C74B0075E446 /* JWPinViewUtil.h */,
 				52F6FB0E1C05C74B0075E446 /* JWPinViewUtil.m */,
-				521BFBB41C06B4F500080E8B /* JWADKCollectionCell.h */,
-				521BFBB51C06B4F500080E8B /* JWADKCollectionCell.m */,
+				521BFBB41C06B4F500080E8B /* JWASDKCollectionCell.h */,
+				521BFBB51C06B4F500080E8B /* JWASDKCollectionCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,11 +318,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521BFBB31C06B49700080E8B /* JWADKViewController.m in Sources */,
+				521BFBB31C06B49700080E8B /* JWASDKViewController.m in Sources */,
 				522F3F5C1C040AC60037103C /* JWPinItem.m in Sources */,
 				52F6FB1A1C05C7960075E446 /* YYWeakProxy.m in Sources */,
 				522F3F441C04095E0037103C /* AppDelegate.m in Sources */,
-				521BFBB61C06B4F500080E8B /* JWADKCollectionCell.m in Sources */,
+				521BFBB61C06B4F500080E8B /* JWASDKCollectionCell.m in Sources */,
 				52F6FB121C05C74B0075E446 /* JWPinCollectionCell.m in Sources */,
 				52F6FB131C05C74B0075E446 /* JWPinCollectionLayout.m in Sources */,
 				522F3F411C04095E0037103C /* main.m in Sources */,
@@ -447,6 +447,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Pinterest/JWPin-PrefixHeader.pch";
 				INFOPLIST_FILE = Pinterest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnwong.pinterest.Pinterest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -461,6 +462,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Pinterest/JWPin-PrefixHeader.pch";
 				INFOPLIST_FILE = Pinterest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnwong.pinterest.Pinterest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

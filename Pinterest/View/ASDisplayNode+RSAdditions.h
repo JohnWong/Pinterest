@@ -24,4 +24,6 @@
 @property CGFloat height;
 @property CGFloat width;
 
+@property CGSize size;
+
 @end

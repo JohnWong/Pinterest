@@ -103,7 +103,7 @@ static CGFloat const minGap = 10;
         } else {
             _labelSize = CGSizeMake(_itemWidth - 2 * minGap, CGFLOAT_MAX);
             _labelSize = [_desc boundingRectWithSize:_labelSize
-                                             options:kNilOptions
+                                             options:NSStringDrawingUsesLineFragmentOrigin
                                           attributes:@{
                                               NSFontAttributeName : [UIFont systemFontOfSize:9]
                                           }

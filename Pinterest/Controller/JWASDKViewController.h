@@ -1,5 +1,5 @@
 //
-//  JWADKViewController.h
+//  JWASDKViewController.h
 //  Pinterest
 //
 //  Created by John Wong on 11/26/15.
@@ -9,6 +9,6 @@
 #import "JWPinViewController.h"
 
 
-@interface JWADKViewController : JWPinViewController
+@interface JWASDKViewController : JWPinViewController
 
 @end

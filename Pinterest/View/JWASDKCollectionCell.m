@@ -1,12 +1,12 @@
 //
-//  JWADKCollectionCell.m
+//  JWASDKCollectionCell.m
 //  Pinterest
 //
 //  Created by John Wong on 11/26/15.
 //  Copyright © 2015 John Wong. All rights reserved.
 //
 
-#import "JWADKCollectionCell.h"
+#import "JWASDKCollectionCell.h"
 #import "UIImageView+WebCache.h"
 #import "AsyncDisplayKit.h"
 #import "ASDisplayNode+RSAdditions.h"
@@ -15,14 +15,14 @@
 static CGFloat const minGap = 10;
 
 
-@interface JWADKImageView : ASDisplayNode
+@interface JWASDKImageView : ASDisplayNode
 
 @property (nonatomic, strong) ASNetworkImageNode *imageView;
 
 @end
 
 
-@implementation JWADKImageView
+@implementation JWASDKImageView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -47,14 +47,14 @@ static CGFloat const minGap = 10;
 @end
 
 
-@interface JWADKDescriptionView : ASDisplayNode
+@interface JWASDKDescriptionView : ASDisplayNode
 
 @property (nonatomic, strong) ASTextNode *descLabel;
 
 @end
 
 
-@implementation JWADKDescriptionView
+@implementation JWASDKDescriptionView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -82,7 +82,7 @@ static CGFloat const minGap = 10;
 @end
 
 
-@interface JWADKCountsView : ASDisplayNode
+@interface JWASDKCountsView : ASDisplayNode
 
 @property (nonatomic, strong) ASImageNode *repinImageView;
 @property (nonatomic, strong) ASTextNode *repinLabel;
@@ -92,7 +92,7 @@ static CGFloat const minGap = 10;
 @end
 
 
-@implementation JWADKCountsView
+@implementation JWASDKCountsView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -103,6 +103,7 @@ static CGFloat const minGap = 10;
         _repinImageView = [[ASImageNode alloc] init];
         _repinImageView.layerBacked = YES;
         _repinImageView.image = [UIImage imageNamed:@"closeup-repins-icon"];
+        _repinImageView.size = _repinImageView.image.size;
         _repinImageView.left = minGap;
         [self addSubnode:_repinImageView];
 
@@ -127,7 +128,7 @@ static CGFloat const minGap = 10;
 @end
 
 
-@interface JWADKnerView : ASDisplayNode
+@interface JWASDKnerView : ASDisplayNode
 
 @property (nonatomic, strong) ASNetworkImageNode *pinnerImage;
 @property (nonatomic, strong) ASTextNode *pinnerName;
@@ -137,7 +138,7 @@ static CGFloat const minGap = 10;
 @end
 
 
-@implementation JWADKnerView
+@implementation JWASDKnerView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -188,11 +189,11 @@ static CGFloat const minGap = 10;
 @end
 
 
-@implementation JWADKCollectionCell {
-    JWADKImageView *_imageView;
-    JWADKDescriptionView *_descView;
-    JWADKCountsView *_countView;
-    JWADKnerView *_pinnerView;
+@implementation JWASDKCollectionCell {
+    JWASDKImageView *_imageView;
+    JWASDKDescriptionView *_descView;
+    JWASDKCountsView *_countView;
+    JWASDKnerView *_pinnerView;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -205,16 +206,16 @@ static CGFloat const minGap = 10;
         self.layer.borderWidth = kOnePix;
         self.clipsToBounds = YES;
 
-        _imageView = [[JWADKImageView alloc] initWithFrame:CGRectZero];
+        _imageView = [[JWASDKImageView alloc] initWithFrame:CGRectZero];
         [self addSubnode:_imageView];
 
-        _descView = [[JWADKDescriptionView alloc] initWithFrame:CGRectZero];
+        _descView = [[JWASDKDescriptionView alloc] initWithFrame:CGRectZero];
         [self addSubnode:_descView];
 
-        _countView = [[JWADKCountsView alloc] initWithFrame:CGRectZero];
+        _countView = [[JWASDKCountsView alloc] initWithFrame:CGRectZero];
         [self addSubnode:_countView];
 
-        _pinnerView = [[JWADKnerView alloc] initWithFrame:CGRectMake(minGap, minGap, self.width - minGap * 2, 24)];
+        _pinnerView = [[JWASDKnerView alloc] initWithFrame:CGRectMake(minGap, minGap, self.width - minGap * 2, 24)];
         [self addSubnode:_pinnerView];
     }
     return self;
@@ -259,7 +260,7 @@ static CGFloat const minGap = 10;
 
     _pinnerView.pinnerName.attributedString = [[NSAttributedString alloc] initWithString:item.pinner.fullName
                                                                               attributes:@{
-                                                                                  NSFontAttributeName : [UIFont systemFontOfSize:9],
+                                                                                  NSFontAttributeName : [UIFont boldSystemFontOfSize:9],
                                                                                   NSForegroundColorAttributeName : [UIColor blackColor]
                                                                               }];
 }
