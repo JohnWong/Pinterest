@@ -1,5 +1,7 @@
 platform :ios, '7.0'
 
-pod 'SDWebImage', '~>3.7'
+pod 'SDWebImage'
 pod 'UIViewAdditions'
-pod 'Reveal-iOS-SDK'
+pod 'AsyncDisplayKit'
+
+pod 'Reveal-iOS-SDK',:configurations => ['Debug']

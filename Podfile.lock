@@ -1,4 +1,7 @@
 PODS:
+  - AsyncDisplayKit (1.9.1):
+    - AsyncDisplayKit/ASDealloc2MainObject (= 1.9.1)
+  - AsyncDisplayKit/ASDealloc2MainObject (1.9.1)
   - Reveal-iOS-SDK (1.6.2)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
@@ -6,11 +9,13 @@ PODS:
   - UIViewAdditions (1.0.0)
 
 DEPENDENCIES:
+  - AsyncDisplayKit
   - Reveal-iOS-SDK
-  - SDWebImage (~> 3.7)
+  - SDWebImage
   - UIViewAdditions
 
 SPEC CHECKSUMS:
+  AsyncDisplayKit: 7bf2b3fa444284f80fd0c1e36655e324549f79d2
   Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   UIViewAdditions: b35c38dd787949168f56c429cd341a55fbaba917
