@@ -229,6 +229,7 @@
 				TargetAttributes = {
 					522F3F3B1C04095E0037103C = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = KC63T62SBR;
 					};
 				};
 			};
@@ -443,6 +444,7 @@
 			baseConfigurationReference = 990E8697FF0B6CFE15D64E28 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Pinterest/JWPin-PrefixHeader.pch";
 				INFOPLIST_FILE = Pinterest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -456,6 +458,7 @@
 			baseConfigurationReference = 29C374F637DDC0983A164932 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Pinterest/JWPin-PrefixHeader.pch";
 				INFOPLIST_FILE = Pinterest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
