@@ -14,6 +14,8 @@
 
 static CGFloat const minGap = 10;
 
+static BOOL isLayerBacked = NO;
+
 
 @interface JWASDKImageView : ASDisplayNode
 
@@ -28,10 +30,10 @@ static CGFloat const minGap = 10;
 {
     self = [super init];
     if (self) {
-        self.layerBacked = YES;
+        self.layerBacked = isLayerBacked;
         [self setFrame:frame];
         _imageView = [[ASNetworkImageNode alloc] initWithWebImage];
-        _imageView.layerBacked = YES;
+        _imageView.layerBacked = isLayerBacked;
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
         [self addSubnode:_imageView];
     }
@@ -60,10 +62,10 @@ static CGFloat const minGap = 10;
 {
     self = [super init];
     if (self) {
-        self.layerBacked = YES;
+        self.layerBacked = isLayerBacked;
         [self setFrame:frame];
         _descLabel = [[ASTextNode alloc] init];
-        _descLabel.layerBacked = YES;
+        _descLabel.layerBacked = isLayerBacked;
         [self addSubnode:_descLabel];
     }
     return self;
@@ -98,17 +100,17 @@ static CGFloat const minGap = 10;
 {
     self = [super init];
     if (self) {
-        self.layerBacked = YES;
+        self.layerBacked = isLayerBacked;
         [self setFrame:frame];
         _repinImageView = [[ASImageNode alloc] init];
-        _repinImageView.layerBacked = YES;
+        _repinImageView.layerBacked = isLayerBacked;
         _repinImageView.image = [UIImage imageNamed:@"closeup-repins-icon"];
         _repinImageView.size = _repinImageView.image.size;
         _repinImageView.left = minGap;
         [self addSubnode:_repinImageView];
 
         _repinLabel = [[ASTextNode alloc] init];
-        _repinLabel.layerBacked = YES;
+        _repinLabel.layerBacked = isLayerBacked;
         _repinLabel.frame = CGRectMake(_repinImageView.right + 2, 0, 0, 12);
         [self addSubnode:_repinLabel];
     }
@@ -144,16 +146,16 @@ static CGFloat const minGap = 10;
 {
     self = [super init];
     if (self) {
-        self.layerBacked = YES;
+        self.layerBacked = isLayerBacked;
         [self setFrame:frame];
         _seperator = [[ASDisplayNode alloc] init];
-        _seperator.layerBacked = YES;
+        _seperator.layerBacked = isLayerBacked;
         _seperator.frame = CGRectMake(0, 0, frame.size.width, kOnePix);
         _seperator.backgroundColor = HEXCOLOR(0xe0e1e2);
         [self addSubnode:_seperator];
 
         _pinnerImage = [[ASNetworkImageNode alloc] initWithWebImage];
-        _pinnerImage.layerBacked = YES;
+        _pinnerImage.layerBacked = isLayerBacked;
         _pinnerImage.frame = CGRectMake(minGap, minGap, 24, 24);
         _pinnerImage.layer.cornerRadius = 2;
         _pinnerImage.clipsToBounds = YES;
@@ -161,7 +163,7 @@ static CGFloat const minGap = 10;
         [self addSubnode:_pinnerImage];
 
         _pick = [[ASTextNode alloc] init];
-        _pick.layerBacked = YES;
+        _pick.layerBacked = isLayerBacked;
         _pick.frame = CGRectMake(_pinnerImage.right + 5, _pinnerImage.top, self.width - _pinnerImage.right - minGap, 12);
         _pick.attributedString = [[NSAttributedString alloc] initWithString:@"Picked for your"
                                                                  attributes:@{
@@ -171,7 +173,7 @@ static CGFloat const minGap = 10;
         [self addSubnode:_pick];
 
         _pinnerName = [[ASTextNode alloc] init];
-        _pinnerName.layerBacked = YES;
+        _pinnerName.layerBacked = isLayerBacked;
         _pinnerName.frame = CGRectMake(_pick.left, _pick.bottom, _pick.width, 12);
         [self addSubnode:_pinnerName];
     }
@@ -224,7 +226,7 @@ static CGFloat const minGap = 10;
 - (void)setItem:(JWPinItem *)item
 {
     _imageView.frame = (CGRect){CGPointZero, item.imageSize};
-    _imageView.backgroundColor = HEXCOLOR(item.dominantColor);
+    _imageView.imageView.backgroundColor = HEXCOLOR(item.dominantColor);
     [_imageView.imageView setURL:[NSURL URLWithString:item.image.url]];
 
     CGFloat top = _imageView.bottom + minGap;
